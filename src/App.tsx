@@ -28,7 +28,7 @@ function Avatar({ avatarBgColor }: { avatarBgColor: string }) {
 function ColorPicker() {
   const [bgColor, setBgColor] = useState<string>(colors[0].value);
   const [isAvatarSelected, setIsAvatarSelected] = useState<boolean>(false);
-  const [avatarBgColor, setAvatarBgColor] = useState<string>(colors[0].value);
+  const [avatarBgColor, setAvatarBgColor] = useState<string>(colors[1].value);
 
   const handleColorChange = (color: string) => {
     if (isAvatarSelected) {
@@ -40,7 +40,7 @@ function ColorPicker() {
 
   const handleReset = () => {
     if (isAvatarSelected) {
-      setAvatarBgColor(colors[0].value);
+      setAvatarBgColor(colors[1].value);
     } else {
       setBgColor(colors[0].value);
     }
